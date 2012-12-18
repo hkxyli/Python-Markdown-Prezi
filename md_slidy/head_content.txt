@@ -1,0 +1,11 @@
+<meta name="generator" content= "HTML Tidy for Linux/x86 (vers 1st November 2003), see www.w3.org" />
+<!-- Timer -->
+<meta name="duration" content="5" />
+<!-- For more contents -->
+<meta name="font-size-adjustment" content="-2" />
+<!--Background Style-->
+<link rel="stylesheet" href="http://www.w3.org/Talks/Tools/Slidy2/styles/w3c-blue.css" type="text/css" />
+<!-- Slidy -->
+<link rel="stylesheet" href="http://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css" type="text/css" />
+<script src="http://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js" charset="utf-8" type="text/javascript"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
