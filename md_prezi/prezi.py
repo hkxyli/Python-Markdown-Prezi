@@ -91,14 +91,37 @@ class Prezi(object):
 		div_slide_ele.set("class","slide cover")
 		if deep_level == 1:
 			for element in list(self.content_root):
-				if str(element.tag)=="h1":
+				if str(element.tag) == "h1":
 					self.body_root.append(div_slide_ele)
-					div_slide_ele=ET.Element("div")
+					div_slide_ele = ET.Element("div")
 					div_slide_ele.set("class","slide")
 				div_slide_ele.append(element)
 		elif deep_level == 2:
-			print "! A little Deep, Coming soon !"
-			sys.exit()
+			h1_ele = None
+			h1_ele_pos = -1
+			for element in list(self.content_root):
+				if str(element.tag) == "h1":
+					
+					self.body_root.append(div_slide_ele)
+					
+					div_slide_ele = ET.Element("div")
+					div_slide_ele.set("class","slide")
+					
+					h1_ele = element
+					h1_ele_pos = self.body_root.__len__()
+				
+				elif str(element.tag)=="h2":
+					
+					self.body_root.append(div_slide_ele)
+					
+					div_slide_ele=ET.Element("div")
+					div_slide_ele.set("class","slide")
+					div_slide_ele.append(h1_ele)
+					self.body_root.__getitem__(h1_ele_pos).append(element)
+				div_slide_ele.append(element)
+
+			# print "! A little Deep, Coming soon !"
+			# sys.exit()
 		else :
 			print "! Too Deep, No Implementation !"
 			sys.exit()
@@ -155,4 +178,4 @@ class Prezi(object):
 ###### ----- text code ----- ######
 # "slide_plain_text_INPUT.txt"
 # file_name, prezi_pattern, *args
-Prezi("", 'slidy',1).finalize()
+Prezi("", 'slidy',2).finalize()
