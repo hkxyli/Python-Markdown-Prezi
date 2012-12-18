@@ -1,5 +1,6 @@
 import codecs
 import webbrowser
+import StringIO
 import markdown
 import xml.etree.ElementTree as ET
 '''
@@ -41,11 +42,12 @@ body_root.append(background_root)
 content_in_file= codecs.open("slide_plain_text_INPUT.txt","r",encoding="utf-8")
 content_plain_text=content_in_file.read()
 content_html="<body>"+markdown.markdown(content_plain_text)+"</body>"
-content_out_file= codecs.open("slide_content.xhtml","w",encoding="utf-8")
-content_out_file.write(content_html)
-content_out_file.close()
-
-content_root = ET.parse('slide_content.xhtml').getroot()
+# content_out_file= codecs.open("slide_content.xhtml","w",encoding="utf-8")
+# content_out_file.write(content_html)
+# content_out_file.close()
+# content_root = ET.parse('slide_content.xhtml').getroot()
+content_file=StringIO.StringIO(content_html)
+content_root = ET.parse(content_file).getroot()
 print "content_root : "+content_root.tag
 
 #####edit div.slide to reset body#####
