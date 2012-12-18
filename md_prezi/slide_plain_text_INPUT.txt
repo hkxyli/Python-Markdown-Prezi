@@ -74,7 +74,7 @@ Markdown also requires the standard Perl library module [Digest::MD5]
   [md5]: http://search.cpan.org/dist/Digest-MD5/MD5.pm
 
 
-### Movable Type ###
+## Movable Type ##
 
 Markdown works with Movable Type version 2.6 or later (including
 Movable Type 3.0).
@@ -113,7 +113,7 @@ Markdown to produce HTML 4 output, see "Configuration", below.
 
 
 
-### Blosxom ###
+## Blosxom ##
 
 Markdown works with Blosxom version 2.0 or later.
 
@@ -139,7 +139,7 @@ Markdown works with Blosxom version 2.0 or later.
   [meta]: http://www.blosxom.com/plugins/meta/meta.htm
 
 
-### BBEdit ###
+## BBEdit ##
 
 Markdown works with BBEdit 6.1 or later on Mac OS X. It also works
 with BBEdit 5.1 or later and MacPerl 5.6.1 on Mac OS 8.6 or later. If
@@ -176,7 +176,7 @@ Markdown can be configured to produce HTML-style tags; e.g.:
     <br>
 
 
-### Movable Type ###
+## Movable Type ##
 
 You need to use a special `MTMarkdownOptions` container tag in each
 Movable Type template where you want HTML 4-style output:
@@ -198,7 +198,7 @@ publish the raw Markdown-formatted text without translation into
     </MTMarkdownOptions>
 
 
-### Command-Line ###
+## Command-Line ##
 
 Use the `--html4tags` command-line switch to produce HTML output from a
 Unix-style command line. E.g.:
